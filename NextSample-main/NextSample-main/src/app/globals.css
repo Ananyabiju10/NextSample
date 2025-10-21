@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 0 83% 93%; /* Lighter shade of Light desaturated red #FDF0F0, was 0 83% 83% (#F8B1B1) */
+    --foreground: 20 14% 4%; /* Dark Brown, almost black for text, was 0 0% 20% */
+    
+    --card: 0 83% 90%; /* Slightly darker/more saturated than background, was 0 83% 86% */
+    --card-foreground: 20 14% 4%; /* Consistent with main foreground */
+    
+    --popover: 0 83% 90%; /* Consistent with card */
+    --popover-foreground: 20 14% 4%; /* Consistent with main foreground */
+    
+    --primary: 0 79% 75%; /* Soft, desaturated red #F08080 */
+    --primary-foreground: 0 0% 100%; /* White for text on primary */
+    
+    --secondary: 0 70% 85%; /* Lighter, less saturated red for secondary elements */
+    --secondary-foreground: 0 79% 55%; /* Darker red for text on secondary, for contrast */
+    
+    --muted: 0 60% 88%; /* Very light, muted red */
+    --muted-foreground: 0 30% 50%; /* Muted red-gray for less important text */
+    
+    --accent: 30 87% 60%; /* Analogous orange #F0A040 */
+    --accent-foreground: 0 0% 100%; /* White for text on accent */
+    
+    --destructive: 0 60% 50%; /* A clearer red for destructive actions */
+    --destructive-foreground: 0 0% 100%; /* White for text on destructive */
+    
+    --border: 0 70% 82%; /* Border color, slightly darker than background parts, was 0 70% 78% */
+    --input: 0 70% 88%; /* Input background, slightly lighter, was 0 70% 80% */
+    --ring: 30 87% 65%; /* Ring color, slightly lighter accent, was 30 87% 60% */
+    
+    --radius: 0.5rem;
+
+    /* Chart colors - can be kept as is or adjusted to theme */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+
+    /* Sidebar specific theme variables */
+    --sidebar-background: 0 83% 88%; /* Slightly different from main bg, was 0 0% 98% */
+    --sidebar-foreground: 20 14% 20%; /* Darker text for sidebar, was 240 5.3% 26.1% */
+    --sidebar-primary: 0 79% 70%; /* Primary color for sidebar active items, was 240 5.9% 10% */
+    --sidebar-primary-foreground: 0 0% 100%; /* Text on sidebar primary, was 0 0% 98% */
+    --sidebar-accent: 0 79% 80%; /* Hover/accent for sidebar items, was 240 4.8% 95.9% */
+    --sidebar-accent-foreground: 0 79% 40%; /* Text on sidebar accent, was 240 5.9% 10% */
+    --sidebar-border: 0 70% 78%; /* Border in sidebar, was 220 13% 91% */
+    --sidebar-ring: 30 87% 60%; /* Ring for focus in sidebar */
+  }
+
+  .dark {
+    /* Dark theme adjustments - keeping it simple for now, focusing on light theme */
+    --background: 20 14% 4%;
+    --foreground: 0 0% 95%;
+    --card: 20 14% 6%;
+    --card-foreground: 0 0% 95%;
+    --popover: 20 14% 6%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 0 79% 75%;
+    --primary-foreground: 20 14% 4%;
+    --secondary: 0 70% 85%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 60% 88%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 30 87% 60%;
+    --accent-foreground: 20 14% 4%;
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 0 70% 82%;
+    --input: 0 70% 88%;
+    --ring: 30 87% 65%;
+
+    --sidebar-background: 20 14% 8%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 0 79% 70%;
+    --sidebar-primary-foreground: 20 14% 4%;
+    --sidebar-accent: 0 79% 80%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 0 70% 78%;
+    --sidebar-ring: 30 87% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
